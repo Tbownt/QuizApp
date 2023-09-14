@@ -3,7 +3,7 @@ import { results } from "../assets/images";
 import { QuizContext } from "../context/QuizContext";
 
 export const Results = () => {
-  const { quizStatus } = useContext(QuizContext);
+  const { quizStatus, restartQuiz } = useContext(QuizContext);
   return (
     <div className="flex flex-col items-center">
       <img
@@ -20,7 +20,10 @@ export const Results = () => {
         respuestas correctas
       </p>
       <div className="border-2 mt-6 p-4 rounded-2xl">
-        <button className="text-[18px] font-semibold text-title">
+        <button
+          className="text-[18px] font-semibold text-title"
+          onClick={restartQuiz}
+        >
           Intentar de nuevo
         </button>
       </div>

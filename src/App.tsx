@@ -12,10 +12,10 @@ const App = () => {
         <img
           src={quiz}
           alt="quiz_icon"
-          className="lg:w-[150px] xl:w-[150px] translate-y-11 translate-x-3"
+          className="lg:w-[150px] xl:w-[165px]  translate-y-11 translate-x-10"
         />
       </div>
-      <div className="rounded-3xl bg-white xl:w-[464px] lg:w-[464px] md:w-[464px] py-[68px] px-[32px] sm:w-[80%]">
+      <div className="rounded-3xl bg-white w-[464px] py-10 px-10 ">
         <QuizProvider>
           <MainContainer />
         </QuizProvider>

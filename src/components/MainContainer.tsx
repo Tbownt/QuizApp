@@ -5,15 +5,18 @@ import { getCountryGroupArray } from "../helpers/countriesApi";
 import { generateQuestionArray } from "../helpers/questionHelper";
 import { Question } from "./QuestionContainer";
 import { CountryMap } from "../interfaces/countries";
+import { Results } from "./Results";
 
 export const MainContainer = () => {
-  const { questionArray, setQuestionArray } = useContext(QuizContext);
+  const { questionArray, setQuestionArray, quizStatus, setRawCountryData } =
+    useContext(QuizContext);
   const { data, isLoading } = useFetch(
     "https://restcountries.com/v3.1/all?fields=name,flags,capital"
   );
 
   useEffect(() => {
     if (!isLoading && data) {
+      setRawCountryData(data);
       const countryGroupArray: CountryMap[] = getCountryGroupArray(data);
       setQuestionArray(generateQuestionArray(countryGroupArray));
     }
@@ -22,7 +25,9 @@ export const MainContainer = () => {
 
   return (
     <>
-      <Question questions={questionArray} />
+      {quizStatus.completed && <Results />}
+
+      {!quizStatus.completed && <Question questions={questionArray} />}
     </>
   );
 };
