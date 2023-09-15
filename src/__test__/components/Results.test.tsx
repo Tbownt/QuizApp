@@ -1,7 +1,10 @@
 import { render } from "@testing-library/react";
 import { QuizContext } from "../../context/QuizContext";
 import { Results } from "../../components/Results";
-import { failedQuizContext, successfulQuizContext } from "../fixtures";
+import {
+  failedQuizContext,
+  successfulQuizContext,
+} from "../fixtures/quizFixtures";
 
 describe("Pruebas en <Results />", () => {
   beforeEach(() => jest.clearAllMocks());

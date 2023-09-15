@@ -18,11 +18,8 @@ export const Results = () => {
         </span>
         respuestas correctas
       </p>
-      <div className="border-2 mt-6 p-4 rounded-2xl">
-        <button
-          className="text-[18px] font-semibold text-title"
-          onClick={restartQuiz}
-        >
+      <div className="text-title border-2 mt-6 p-4 rounded-2xl hover:bg-title hover:text-white">
+        <button className="text-[18px] font-semibold" onClick={restartQuiz}>
           Intentar de nuevo
         </button>
       </div>

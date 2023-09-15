@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <Results /> Debe de mostrar el resultado de un quiz completado con 5/10 preguntas correctas. 1`] = `
+<div>
+  <div
+    class="flex flex-col items-center"
+  >
+    <img
+      alt="results_icon"
+      class="w-[238px] flex-shrink-0 top"
+      src="../assets/images/undraw_winners_ao2o2.svg"
+    />
+    <h2
+      class="text-5xl font-bold text-title mt-10"
+    >
+      Resultado
+    </h2>
+    <p
+      class="mt-5"
+    >
+      Obtuviste
+       
+      <span
+        class="text-2xl font-bold text-green"
+      >
+        5
+         
+      </span>
+      respuestas correctas
+    </p>
+    <div
+      class="border-2 mt-6 p-4 rounded-2xl"
+    >
+      <button
+        class="text-[18px] font-semibold text-title"
+      >
+        Intentar de nuevo
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Pruebas en <Results /> Debe de mostrar el resultado de un quiz completado con 10/10 preguntas correctas. 1`] = `
+<div>
+  <div
+    class="flex flex-col items-center"
+  >
+    <img
+      alt="results_icon"
+      class="w-[238px] flex-shrink-0 top"
+      src="../assets/images/undraw_winners_ao2o2.svg"
+    />
+    <h2
+      class="text-5xl font-bold text-title mt-10"
+    >
+      Resultado
+    </h2>
+    <p
+      class="mt-5"
+    >
+      Obtuviste
+       
+      <span
+        class="text-2xl font-bold text-green"
+      >
+        10
+         
+      </span>
+      respuestas correctas
+    </p>
+    <div
+      class="border-2 mt-6 p-4 rounded-2xl"
+    >
+      <button
+        class="text-[18px] font-semibold text-title"
+      >
+        Intentar de nuevo
+      </button>
+    </div>
+  </div>
+</div>
+`;

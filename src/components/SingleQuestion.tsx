@@ -42,7 +42,7 @@ export const SingleQuestion = ({ question, onAnswerSubmit }) => {
               }}
               onClick={() => validateAnswer(item, correctAnswer)}
               key={`${index}-${item.capital}`}
-              className="my-3 border-[2px] rounded-[6px] p-2 border-title cursor-pointer"
+              className="hover:border-[3px] my-3 border-[2px] rounded-[6px] p-2 border-title cursor-pointer "
             >
               <span className="text-title text-[18px]">
                 {`${questionLetters[index]}.`} {item.capital}{" "}
@@ -100,24 +100,24 @@ export const SingleQuestion = ({ question, onAnswerSubmit }) => {
           <p className="text-title font-bold w-96 text-2xl my-2">
             A cual país pertenece esta bandera?
           </p>
-          <ul className="">
+          <>
             {questionItem.options.map((item, index) => (
-              <li
+              <div
                 style={{
                   backgroundColor: selectedAnswer
                     ? getAnswerColors(item)
                     : "transparent",
                 }}
-                className="my-3 border-[2px] rounded-[6px] p-2 border-title cursor-pointer"
+                className="hover:border-[3px] my-2 border-[2px] rounded-[6px] p-2 border-title cursor-pointer"
                 onClick={() => validateAnswer(item, correctAnswer)}
                 key={`${index}-${item.countryName}`}
               >
                 <span className="text-title text-[18px]">
                   {`${questionLetters[index]}.`} {item.countryName}
                 </span>
-              </li>
+              </div>
             ))}
-          </ul>
+          </>
         </div>
       </>
     );

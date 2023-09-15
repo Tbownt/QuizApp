@@ -37,12 +37,12 @@ export const Question = ({ questions }) => {
         <div
           className={
             enableButtonNext
-              ? "w-[30%] border text-center rounded-[12px] text-white bg-yellow h-10 self-end"
+              ? "w-[35%] border text-center rounded-[12px] text-white bg-yellow h-10 self-end hover:border-title hover:border-[3px]"
               : ""
           }
         >
           {enableButtonNext && (
-            <button onClick={handlePageChange} className="pt-2">
+            <button onClick={handlePageChange} className="pt-[5px]">
               {quizStatus.currentQuestion === 10 ? "Resultados" : "Siguiente"}
             </button>
           )}
