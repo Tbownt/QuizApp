@@ -1,8 +1,19 @@
-import { describe, expect, test } from "@jest/globals";
-import { screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import { Results } from "../components/Results";
+import { QuizContext } from "../context/QuizContext";
+import { describe, jest, test } from "@jest/globals";
 
-describe("Test en QuizCountryApp", () => {
-  test("should ", () => {
+describe("Pruebas en <SingleQuestion/> ", () => {
+  test("Results ", () => {
+    const contextValue = {
+      quizStatus: 1,
+      restartQuiz: jest.fn(),
+    };
+    render(
+      <QuizContext.Provider value={contextValue}>
+        <Results />
+      </QuizContext.Provider>
+    );
     screen.debug();
   });
 });

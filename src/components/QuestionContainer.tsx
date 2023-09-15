@@ -36,8 +36,9 @@ export const Question = ({ questions }) => {
         </span>
         <div
           className={
-            enableButtonNext &&
-            "w-[30%] border text-center rounded-[12px] text-white bg-yellow h-10 self-end"
+            enableButtonNext
+              ? "w-[30%] border text-center rounded-[12px] text-white bg-yellow h-10 self-end"
+              : ""
           }
         >
           {enableButtonNext && (

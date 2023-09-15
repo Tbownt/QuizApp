@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { results } from "../assets/images";
+import results from "../assets/images/undraw_winners_ao2o2.svg";
 import { QuizContext } from "../context/QuizContext";
 
 export const Results = () => {

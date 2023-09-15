@@ -1,4 +1,4 @@
-import { quiz } from "./assets/images";
+import quiz from "./assets/images/undraw_adventure_4hum 1.svg";
 import { MainContainer } from "./components/MainContainer";
 import { QuizProvider } from "./context/QuizProvider";
 
