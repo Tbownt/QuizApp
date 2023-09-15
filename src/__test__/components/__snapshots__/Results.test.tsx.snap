@@ -29,10 +29,10 @@ exports[`Pruebas en <Results /> Debe de mostrar el resultado de un quiz completa
       respuestas correctas
     </p>
     <div
-      class="border-2 mt-6 p-4 rounded-2xl"
+      class="text-title border-2 mt-6 p-4 rounded-2xl hover:bg-title hover:text-white"
     >
       <button
-        class="text-[18px] font-semibold text-title"
+        class="text-[18px] font-semibold"
       >
         Intentar de nuevo
       </button>
@@ -70,10 +70,10 @@ exports[`Pruebas en <Results /> Debe de mostrar el resultado de un quiz completa
       respuestas correctas
     </p>
     <div
-      class="border-2 mt-6 p-4 rounded-2xl"
+      class="text-title border-2 mt-6 p-4 rounded-2xl hover:bg-title hover:text-white"
     >
       <button
-        class="text-[18px] font-semibold text-title"
+        class="text-[18px] font-semibold"
       >
         Intentar de nuevo
       </button>
