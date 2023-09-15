@@ -25,3 +25,6 @@ si es una pregunta de bandera o capital pude dar con la solución.
 El proyecto se basa en un Quiz dónde se le muestra al usuario unas capitales y banderas con 4 opciones:
 al clickear una opcion te muestra si acertaste o no, tiene un sistema de puntaje donde se puede ver cuantas
 respuestas correctas tiene el usuario, consta de 10 preguntas y al final de estas muestra su resultado.
+
+## Deploy
+```https://aeto-andres-salom.netlify.app/```
