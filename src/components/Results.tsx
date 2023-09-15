@@ -6,7 +6,7 @@ export const Results = () => {
   return (
     <div className="flex flex-col items-center">
       <img
-        src={"../assets/images/undraw_winners_ao2o2.svg"}
+        src={"/undraw_winners_ao2o2.svg"}
         alt="results_icon"
         className="w-[238px] flex-shrink-0 top"
       />

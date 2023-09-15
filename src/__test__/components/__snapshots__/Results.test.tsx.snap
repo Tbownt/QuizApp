@@ -8,7 +8,7 @@ exports[`Pruebas en <Results /> Debe de mostrar el resultado de un quiz completa
     <img
       alt="results_icon"
       class="w-[238px] flex-shrink-0 top"
-      src="../assets/images/undraw_winners_ao2o2.svg"
+      src="/undraw_winners_ao2o2.svg"
     />
     <h2
       class="text-5xl font-bold text-title mt-10"
@@ -49,7 +49,7 @@ exports[`Pruebas en <Results /> Debe de mostrar el resultado de un quiz completa
     <img
       alt="results_icon"
       class="w-[238px] flex-shrink-0 top"
-      src="../assets/images/undraw_winners_ao2o2.svg"
+      src="/undraw_winners_ao2o2.svg"
     />
     <h2
       class="text-5xl font-bold text-title mt-10"

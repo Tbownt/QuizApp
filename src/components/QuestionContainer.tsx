@@ -31,7 +31,7 @@ export const Question = ({ questions }) => {
         />
       )}
       <div className="flex flex-row">
-        <span className="text-title font-bold w-96 text-[16px]  text-left mt-3">
+        <span className="text-title font-bold w-96 text-[16px] text-left mt-3">
           Correctas ({quizStatus.correctAnswers} / {questions.length})
         </span>
         <div

@@ -32,9 +32,9 @@ export const SingleQuestion = ({ question, onAnswerSubmit }) => {
         <p className="text-title font-bold w-96 text-2xl my-2">
           La capital de {correctAnswer.countryName} es:{" "}
         </p>
-        <ul>
+        <div className="h-[320px] flex flex-col gap-5">
           {questionItem.options.map((item, index) => (
-            <li
+            <div
               style={{
                 backgroundColor: selectedAnswer
                   ? getAnswerColors(item)
@@ -42,14 +42,14 @@ export const SingleQuestion = ({ question, onAnswerSubmit }) => {
               }}
               onClick={() => validateAnswer(item, correctAnswer)}
               key={`${index}-${item.capital}`}
-              className="hover:border-[3px] my-3 border-[2px] rounded-[6px] p-2 border-title cursor-pointer "
+              className="hover:border-[5px]  border-[2px] rounded-[6px] p-2 border-title cursor-pointer "
             >
               <span className="text-title text-[18px]">
                 {`${questionLetters[index]}.`} {item.capital}{" "}
               </span>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </>
     );
   };
@@ -91,7 +91,7 @@ export const SingleQuestion = ({ question, onAnswerSubmit }) => {
     if (!questionItem) return null;
     return (
       <>
-        <div className="flex flex-col">
+        <div className="h-[365px] flex flex-col gap-2">
           <img
             src={correctAnswer.flag}
             alt={correctAnswer.flagAlt}
@@ -108,7 +108,7 @@ export const SingleQuestion = ({ question, onAnswerSubmit }) => {
                     ? getAnswerColors(item)
                     : "transparent",
                 }}
-                className="hover:border-[3px] my-2 border-[2px] rounded-[6px] p-2 border-title cursor-pointer"
+                className="hover:border-[3px] border-[2px] rounded-[6px] p-2 border-title cursor-pointer"
                 onClick={() => validateAnswer(item, correctAnswer)}
                 key={`${index}-${item.countryName}`}
               >
