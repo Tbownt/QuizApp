@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/custom.d.ts"],
+  "include": ["src", "src/custom.d.ts", "jest.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

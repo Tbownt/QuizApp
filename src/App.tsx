@@ -1,4 +1,3 @@
-import quiz from "./assets/images/undraw_adventure_4hum 1.svg";
 import { MainContainer } from "./components/MainContainer";
 import { QuizProvider } from "./context/QuizProvider";
 
@@ -10,7 +9,7 @@ const App = () => {
           COUNTRY QUIZ
         </h1>
         <img
-          src={quiz}
+          src={"../assets/images/undraw_adventure_4hum 1.svg"}
           alt="quiz_icon"
           className="lg:w-[150px] xl:w-[165px]  translate-y-11 translate-x-10"
         />

@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import results from "../assets/images/undraw_winners_ao2o2.svg";
 import { QuizContext } from "../context/QuizContext";
 
 export const Results = () => {
@@ -7,7 +6,7 @@ export const Results = () => {
   return (
     <div className="flex flex-col items-center">
       <img
-        src={results}
+        src={"../assets/images/undraw_winners_ao2o2.svg"}
         alt="results_icon"
         className="w-[238px] flex-shrink-0 top"
       />
