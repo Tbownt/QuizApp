@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Option } from "../interfaces/countries";
 
 const questionLetters = ["A", "B", "C", "D"];
 
@@ -19,7 +20,7 @@ export const SingleQuestion = ({ question, onAnswerSubmit }) => {
     setUserSelectedAnswer(false);
   }, [question]);
 
-  const listAnswersByCapitalQuestion = (questionItem = []) => {
+  const listAnswersByCapitalQuestion = (questionItem: Option) => {
     if (!questionItem) return null;
 
     const correctAnswer = questionItem.options.find(
@@ -41,7 +42,7 @@ export const SingleQuestion = ({ question, onAnswerSubmit }) => {
               }}
               onClick={() => validateAnswer(item, correctAnswer)}
               key={`${index}-${item.capital}`}
-              className="my-3 border-[2px] rounded-[6px] p-2 border-title"
+              className="my-3 border-[2px] rounded-[6px] p-2 border-title cursor-pointer"
             >
               <span className="text-title text-[18px]">
                 {`${questionLetters[index]}.`} {item.capital}{" "}
@@ -86,7 +87,7 @@ export const SingleQuestion = ({ question, onAnswerSubmit }) => {
     if (selectedAnswer.valid !== correctAnswer.valid) return "#EA8282";
   };
 
-  const listAnswersByFlagQuestion = (questionItem = []) => {
+  const listAnswersByFlagQuestion = (questionItem: Option) => {
     if (!questionItem) return null;
     return (
       <>
@@ -107,7 +108,7 @@ export const SingleQuestion = ({ question, onAnswerSubmit }) => {
                     ? getAnswerColors(item)
                     : "transparent",
                 }}
-                className="my-3 border-[2px] rounded-[6px] p-2 border-title"
+                className="my-3 border-[2px] rounded-[6px] p-2 border-title cursor-pointer"
                 onClick={() => validateAnswer(item, correctAnswer)}
                 key={`${index}-${item.countryName}`}
               >

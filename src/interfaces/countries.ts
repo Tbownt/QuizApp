@@ -8,20 +8,14 @@ export interface Enter {
 export interface CountryMap {
   valid: boolean;
   countryName: string;
-  capital: string[];
+  capital?: string;
   flag: string;
   flagAlt: string;
   commonName: string;
 }
 
 export interface Option {
-  options: {
-    valid: boolean;
-    countryName: string;
-    capital: string[];
-    flag: string;
-    flagAlt: string;
-  };
+  options: CountryMap[];
   checkFor: string;
 }
 

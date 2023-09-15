@@ -1,7 +1,7 @@
 import { CountryMap } from "../interfaces/countries";
 
-export const generateQuestionArray = (countryGroupArray: []) => {
-  const questionGroup = countryGroupArray.map((countryGroup: []) => {
+export const generateQuestionArray = (countryGroupArray: CountryMap) => {
+  const questionGroup = countryGroupArray.map((countryGroup) => {
     // select a random country from that group to use as the correct answer.
     const randomValidIndex = Math.floor(Math.random() * countryGroup.length);
     return {
@@ -17,7 +17,7 @@ const mapQuestionOptions = (
   countryGroup: CountryMap[],
   correctCountryIndex: number
 ) => {
-  return countryGroup.map((item, index) => ({
+  return countryGroup.map((item: CountryMap, index) => ({
     valid: correctCountryIndex === index ? true : false,
     countryName: item.commonName,
     capital: item.capital,
