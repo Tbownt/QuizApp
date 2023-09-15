@@ -2,6 +2,7 @@ import { useState } from "react";
 import { QuizContext } from "./QuizContext";
 import { getCountryGroupArray } from "../helpers/countriesApi";
 import { generateQuestionArray } from "../helpers/questionHelper";
+import { CountryApi, Option } from "../interfaces/countries";
 
 export const QuizProvider = ({ children }) => {
   const initialQuizStatus = {
@@ -10,8 +11,10 @@ export const QuizProvider = ({ children }) => {
     correctAnswers: 0,
   };
 
-  const [rawCountryData, setRawCountryData] = useState();
-  const [questionArray, setQuestionArray] = useState();
+  const [rawCountryData, setRawCountryData] = useState<
+    CountryApi[] | undefined
+  >();
+  const [questionArray, setQuestionArray] = useState<Option[] | undefined>();
   const [quizStatus, setQuizStatus] = useState(initialQuizStatus);
 
   const increaseCorrectAnswerCount = () => {
