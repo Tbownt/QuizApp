@@ -4,7 +4,6 @@ import { QuizContext } from "../context/QuizContext";
 import { getCountryGroupArray } from "../helpers/countriesApi";
 import { generateQuestionArray } from "../helpers/questionHelper";
 import { Question } from "./QuestionContainer";
-import { CountryMap } from "../interfaces/countries";
 import { Results } from "./Results";
 
 export const MainContainer = () => {
@@ -17,7 +16,7 @@ export const MainContainer = () => {
   useEffect(() => {
     if (!isLoading && data) {
       setRawCountryData(data);
-      const countryGroupArray: CountryMap[] = getCountryGroupArray(data);
+      const countryGroupArray = getCountryGroupArray(data);
       setQuestionArray(generateQuestionArray(countryGroupArray));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

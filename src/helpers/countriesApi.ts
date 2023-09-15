@@ -1,22 +1,25 @@
-import { Enter } from "../interfaces/countries";
+import { Country, CountryApi } from "../interfaces/countries";
 
 // Retorna un array de 10 grupos de paises (cada grupo con 4 paises), listos para ser convertidos a preguntas.
-export const getCountryGroupArray = (apiResponse: []) => {
+export const getCountryGroupArray = (
+  apiResponse: CountryApi[]
+): Array<Country[]> => {
   if (!apiResponse) return [];
 
-  const foundGroups = [];
+  const foundGroups: Array<Country[]> = [];
 
   for (let index = 1; index <= 10; index++) {
-    foundGroups.push(getRandomCountryGroup(apiResponse));
+    const countryGroup: Country[] = getRandomCountryGroup(apiResponse);
+    foundGroups.push(countryGroup);
   }
 
   return foundGroups;
 };
 
 // Retorna un grupo de 4 paises random.
-const getRandomCountryGroup = (array: []) => {
+const getRandomCountryGroup = (array: CountryApi[]): Country[] => {
   // Clonar el array original para no modificarlo directamente
-  const shuffled = array.slice();
+  const shuffled = array.slice() as [];
 
   shuffleArray(shuffled); // Barajar el array
 
@@ -30,11 +33,11 @@ const getRandomCountryGroup = (array: []) => {
 };
 
 // Estructura los paises de una forma más manejable.
-const mapCountry = (countryApi: Enter) => {
+const mapCountry = (countryApi: CountryApi): Country => {
   return {
     flag: countryApi.flags.svg || countryApi.flags.svg || "",
     flagAlt: countryApi.flags.alt || "",
-    commonName: countryApi.name.common || "",
+    countryName: countryApi.name.common || "",
     capital: countryApi.capital[0] || "Sin Capital",
   };
 };
