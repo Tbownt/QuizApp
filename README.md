@@ -1,6 +1,6 @@
 # QuizCountry
 
-## Este proyecto ha sido realizado como una prueba técnica para la empresa de AETO.
+## Este proyecto ha sido realizado como una prueba técnica para una empresa Mexicana.
 
 Para inicializar el proyecto se deben agregar las dependencias del mismo en el package.json.
 
@@ -27,4 +27,4 @@ al clickear una opcion te muestra si acertaste o no, tiene un sistema de puntaje
 respuestas correctas tiene el usuario, consta de 10 preguntas y al final de estas muestra su resultado.
 
 ## Deploy
-```https://aeto-andres-salom.netlify.app/```
+```https://prueba-tecnica-andres-salom.netlify.app/```
